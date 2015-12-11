@@ -7,6 +7,8 @@ __author__ = 'AllenCHM'
 import time
 import hashlib
 from flask import  Flask, request, make_response
+app = Flask(__name__)
+
 
 @app.route('/auth', methods=['GET', 'POST'])
 def wechat_auth():
@@ -24,6 +26,6 @@ def wechat_auth():
             return make_response(echostr)
 
 if __name__ == "__main__":
-    app = Flask(__name__)
+
     app.run(host=u'0.0.0.0', port=80)
 
