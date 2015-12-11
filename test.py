@@ -9,7 +9,7 @@ import hashlib
 from flask import  Flask, request, make_response
 
 @app.route('/auth', methods=['GET', 'POST'])
-def wechat_auth();
+def wechat_auth():
     if request.method == 'GET':
         token = u'watchword'
         query = request.args
